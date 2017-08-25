@@ -8,7 +8,7 @@
     "feathers",
     "feathers-plugin"
   ],
-  "license": "MIT",
+  "license": "GPL",
   "repository": {
     "type": "git",
     "url": "git://github.com/mysamai/mysam-ui.git"

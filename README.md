@@ -1,5 +1,7 @@
 # mysam-ui
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mysamai/mysam-ui.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/mysamai/mysam-ui.png?branch=master)](https://travis-ci.org/mysamai/mysam-ui)
 [![Code Climate](https://codeclimate.com/github/mysamai/mysam-ui/badges/gpa.svg)](https://codeclimate.com/github/mysamai/mysam-ui)
 [![Test Coverage](https://codeclimate.com/github/mysamai/mysam-ui/badges/coverage.svg)](https://codeclimate.com/github/mysamai/mysam-ui/coverage)

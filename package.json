@@ -38,7 +38,6 @@
     "test": "npm run lint",
     "start": "webpack-dev-server",
     "clean": "shx rm -rf dist/ && shx mkdir -p dist",
-    "prepublish": "npm run browserify",
     "styles": "lessc styles/styles.less > dist/styles.css",
     "add-dist": "npm run build && git add dist/ --force && git commit -am \"Updating dist\"",
     "build": "npm run clean && npm run styles && npm run webpack",

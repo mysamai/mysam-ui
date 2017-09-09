@@ -8,14 +8,45 @@
 </head>
 <body>
   <div id="content" class="full"></div>
+  <script src="http://localhost/development/mysam/mysam/dist/mysam.js"></script>
   <script src="./dist/mysam-ui.js"></script>
   <script>
-    mysam.ui({
-      configure(fn) {
-        fn.call(this);
-        return this;
-      }
-    }, document.getElementById('content'));
+    const app = window.sam = mysam();
+    const sam = MysamUi(app, document.getElementById('content'));
+
+    // localStorage.clear();
+
+    // sam.service('classify').on('trained', data => {
+    //   sam.service('classify').create({
+    //     text: 'Yo, the name is test'
+    //   }).then(res => {
+    //     console.log(res);
+    //   });
+
+    //   sam.service('classify').create({
+    //     text: 'How\'s the weather in Berlin?'
+    //   }).then(res => {
+    //     console.log(res);
+    //   });
+    // });
+
+    // Promise.all([
+    //   sam.service('trainings').create({
+    //     text: 'hi my name is david',
+    //     action: {
+    //       type: 'hi',
+    //       tags: { to: [ 4,4 ] }
+    //     }
+    //   }),
+
+    //   sam.service('trainings').create({
+    //     text: 'what is the weather in vancouver',
+    //     action: {
+    //       type: 'weather',
+    //       tags: { location: [ 5, 5 ] }
+    //     }
+    //   })
+    // ]);
   </script>
 </body>
 </html>

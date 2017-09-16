@@ -25,6 +25,18 @@ module.exports = class MySamUi {
     this.app = app;
     this.actions = {};
     this.learners = {};
+
+    this.service('classify').on('created',
+      classification => this.processClassification(classification)
+    );
+
+    this.recognizer.on('transcript', transcript =>
+      this.service('classify').create(transcript)
+    );
+  }
+
+  get element() {
+    return document.getElementById('main');
   }
 
   service (...args) {
@@ -48,7 +60,7 @@ module.exports = class MySamUi {
   }
 
   classify (text) {
-    return this.service('classification').create({ text });
+    return this.service('classify').create({ text });
   }
 
   render (content, el) {
@@ -95,8 +107,6 @@ module.exports = class MySamUi {
   }
 
   runAction (type, classification) {
-    const main = document.getElementById('main');
-
     if (typeof this._teardownAction === 'function') {
       debug('Calling plugin teardown function');
       this._teardownAction();
@@ -110,6 +120,6 @@ module.exports = class MySamUi {
       throw new Error(`'${type}' is not a valid action!`);
     }
 
-    this._teardownAction = fn.call(this, main, classification);
+    this._teardownAction = fn.call(this, this.element, classification);
   }
 };

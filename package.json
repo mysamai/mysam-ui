@@ -3,7 +3,7 @@
   "description": "A MySam web frontend for mysam-core built with React",
   "version": "0.0.0",
   "homepage": "https://github.com/mysamai/mysam-ui",
-  "main": "lib/",
+  "main": "src/",
   "keywords": [
     "feathers",
     "feathers-plugin"
@@ -51,7 +51,7 @@
     ]
   },
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "dependencies": {
     "mobx": "^3.2.2",

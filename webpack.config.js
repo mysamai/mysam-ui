@@ -5,19 +5,22 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'development';
 const commons = {
-  context: path.join(__dirname, 'lib'),
+  context: path.join(__dirname, 'src'),
   entry: './index.js',
   output: {
-    library: 'MysamUi',
+    library: 'mysam',
     libraryTarget: 'umd',
     filename: path.join('dist', 'mysam-ui.js')
   },
   module: {
     rules: [{
       test: /\.jsx?$/,
-      exclude: /node_modules/,
+      exclude: /node_modules/, // !(\/feathers.*$)
       loader: 'babel-loader'
     }]
+  },
+  node: {
+    fs: 'empty'
   }
 };
 
@@ -25,14 +28,15 @@ const dev = {
   devtool: 'source-map',
   devServer: {
     port: 3030,
-    contentBase: '.'
+    contentBase: '.',
+    compress: true
   }
 };
 
 const production = {
   devtool: 'cheap-module-source-map',
   output: {
-    filename: 'mysam-ui.min.js'
+    filename: path.join('dist', 'mysam-ui.min.js')
   },
   plugins: [
     new UglifyJSPlugin({

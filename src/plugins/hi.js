@@ -6,7 +6,7 @@ export default function (sam) {
     const to = classification.extracted.to;
     const text = `Hi ${to}!`;
 
-    return sam.render(el, <h1><Typer>{text}</Typer></h1>);
+    return sam.render(<h1><Typer>{text}</Typer></h1>, el);
   });
 
   sam.learn('hi', {

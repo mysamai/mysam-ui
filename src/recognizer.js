@@ -10,7 +10,7 @@ const SpeechRecognition = window.SpeechRecognition ||
   window.oSpeechRecognition;
 
 export default class Recognizer extends EventEmitter {
-  constructor () {
+  constructor ({ continuous = false, interimResults = false } = {}) {
     super();
 
     const recognition = this.recognition = new SpeechRecognition();
@@ -19,6 +19,9 @@ export default class Recognizer extends EventEmitter {
       listening: false,
       transcript: ''
     });
+
+    recognition.interimResults = continuous;
+    recognition.continuous = continuous;
 
     recognition.onresult = event => this.emit('result', event);
     recognition.onerror = event => this.emit('error', event);
@@ -45,13 +48,17 @@ export default class Recognizer extends EventEmitter {
       if (event.results.length > 0) {
         let transcripts = event.results[event.results.length - 1];
 
-        if (transcripts.isFinal) {
+        if (continuous || transcripts.isFinal) {
           const { confidence, transcript } = transcripts[0];
 
           this.emit('transcript', { confidence, text: transcript });
         }
       }
     });
+  }
+
+  teardown() {
+    return this.stop().then(() => this.removeAllListeners());
   }
 
   toggle () {
@@ -68,10 +75,12 @@ export default class Recognizer extends EventEmitter {
       this.recognition.start();
 
       this.once('transcript', transcript => {
-        debug('Got final transcript', transcript);
-        this.stop();
-        this.removeListener('error', onError);
-        resolve(transcript);
+        if(transcript.isFinal) {
+          debug('Got final transcript', transcript);
+          this.stop();
+          this.removeListener('error', onError);
+          resolve(transcript);
+        }
       });
 
       this.once('error', onError);
@@ -80,6 +89,10 @@ export default class Recognizer extends EventEmitter {
 
   stop () {
     return new Promise(resolve => {
+      if(!this.listening) {
+        return resolve();
+      }
+
       debug('Stopping recognition');
       this.recognition.stop();
       this.once('end', () => resolve());

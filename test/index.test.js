@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const plugin = require('../lib');
+const plugin = require('../src');
 
 describe('mysam-ui', () => {
   it('basic functionality', () => {

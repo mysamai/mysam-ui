@@ -15,7 +15,7 @@ const commons = {
   module: {
     rules: [{
       test: /\.jsx?$/,
-      exclude: /node_modules/, // !(\/feathers.*$)
+      exclude: /node_modules\/(?!(feathers|mysam))/,
       loader: 'babel-loader'
     }]
   },

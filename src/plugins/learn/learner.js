@@ -17,7 +17,7 @@ class Learner extends React.Component {
     this.selectAction = this.selectAction.bind(this);
   }
 
-  get store() {
+  get store () {
     return this.props.store;
   }
 
@@ -41,7 +41,7 @@ class Learner extends React.Component {
     // });
   }
 
-  selectAction(ev) {
+  selectAction (ev) {
     this.store.action.type = ev.target.value;
   }
 

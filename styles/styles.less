@@ -76,7 +76,15 @@ h1, h2, h3, h4, h5,h6  {
 .icon-mysam-icon:before {
   content: "\e902";
 }
-.icon-base {
+
+.round-button {
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon-base, .round-button {
   background-color: @brand-color-2;
   border-radius: 50%;
   width: 50px;
@@ -254,7 +262,13 @@ header {
     font-size: 0.6em;
     color: @brand-color-4;
     text-shadow: none;
-    padding-right: 10px;
+    line-height: 50px;
+  }
+
+  button {
+    display: inline-block;
+    float: right;
+    margin-left: 10px;
   }
 
   .fa {

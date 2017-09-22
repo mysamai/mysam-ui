@@ -35,7 +35,7 @@ module.exports = class MySamUi {
     );
   }
 
-  get element() {
+  get element () {
     return document.getElementById('main');
   }
 

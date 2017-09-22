@@ -57,7 +57,7 @@ export default class Recognizer extends EventEmitter {
     });
   }
 
-  teardown() {
+  teardown () {
     return this.stop().then(() => this.removeAllListeners());
   }
 
@@ -75,7 +75,7 @@ export default class Recognizer extends EventEmitter {
       this.recognition.start();
 
       this.once('transcript', transcript => {
-        if(transcript.isFinal) {
+        if (transcript.isFinal) {
           debug('Got final transcript', transcript);
           this.stop();
           this.removeListener('error', onError);
@@ -89,7 +89,7 @@ export default class Recognizer extends EventEmitter {
 
   stop () {
     return new Promise(resolve => {
-      if(!this.listening) {
+      if (!this.listening) {
         return resolve();
       }
 

@@ -22,7 +22,7 @@ module.exports = function (el, config = {}) {
   const trainings = sam.service('trainings');
 
   trainings.find().then(page => {
-    if(page.total === 0) {
+    if (page.total === 0) {
       debug('Initializing seed traings', seeds);
       seeds.forEach(current => trainings.create(current));
     }

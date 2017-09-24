@@ -82,6 +82,12 @@ h1, h2, h3, h4, h5,h6  {
   border: none;
   cursor: pointer;
   outline: none;
+
+  &.small {
+    width: 40px;
+    height: 40px;
+    font-size: 0.7em;
+  }
 }
 
 .icon-base, .round-button {
@@ -157,14 +163,6 @@ select {
   &:focus {
     outline: none;
   }
-}
-
-button.fa {
-  border: none;
-  margin-top: 20px;
-  font-size: 2em;
-  background: none;
-  outline: none;
 }
 
 textarea:focus, input:focus {
@@ -269,11 +267,10 @@ header {
     display: inline-block;
     float: right;
     margin-left: 10px;
-  }
 
-  .fa {
-    width: 36px;
-    text-align: center;
+    &.small {
+      margin-top: 5px;
+    }
   }
 }
 

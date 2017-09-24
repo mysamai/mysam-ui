@@ -1,7 +1,7 @@
 import _debug from 'debug';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import mysam from 'mysam';
+import mysam from 'mysam/lib/browser';
 
 import MySamUi from './sam';
 import Main from './components/main';

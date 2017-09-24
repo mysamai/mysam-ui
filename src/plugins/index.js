@@ -4,6 +4,7 @@ import hi from './hi';
 import home from './home';
 import help from './help';
 import input from './input';
+import language from './language';
 
 export default function () {
   return function (app) {
@@ -12,6 +13,7 @@ export default function () {
       .configure(hi)
       .configure(home)
       .configure(help)
-      .configure(input);
+      .configure(input)
+      .configure(language);
   };
 }

@@ -8,6 +8,7 @@ export class Store {
     const action = sam.currentAction;
 
     extendObservable(this, {
+      sam,
       action,
       classification,
       learners,

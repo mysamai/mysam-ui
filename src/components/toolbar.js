@@ -7,12 +7,19 @@ export default observer(({ recognizer, sam }) => {
 
   return <header>
     <div className='padded'>
+      {sam.currentAction ?
+        <div className='pull-left'>
+          <button className='round-button small' onClick={() => sam.runAction('learn')}>
+            <i className='fa fa-undo' aria-hidden='true' />
+          </button>
+        </div>
+      : null}
       <div className='pull-right'>
         <small>{transcript.text}</small>
 
         <button onClick={() => recognizer.toggle()}
           className={className} />
-        <button className='round-button' onClick={() => sam.runAction('input')}>
+        <button className='round-button small' onClick={() => sam.runAction('input')}>
           <i className='fa fa-keyboard-o' aria-hidden='true' />
         </button>
       </div>

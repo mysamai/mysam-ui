@@ -57,6 +57,10 @@ export default class Recognizer extends EventEmitter {
     });
   }
 
+  set lang(language) {
+    return (this.recognition.lang = language);
+  }
+
   teardown () {
     return this.stop().then(() => this.removeAllListeners());
   }

@@ -33,12 +33,10 @@ class Learner extends React.Component {
       text: this.store.classification.text, action
     };
 
-    debug('Creating training', data);
-
-    // this.sam.service('trainings').create(data).then(training => {
-    //   debug('Sending classification from new training', training);
-    //   this.sam.processClassification(training.classification);
-    // });
+    this.store.sam.service('trainings').create(data).then(training => {
+      debug('Sending classification from new training', training);
+      this.store.sam.processClassification(training.classification);
+    });
   }
 
   selectAction (ev) {

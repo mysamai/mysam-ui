@@ -57,7 +57,7 @@
     "mobx": "^3.2.2",
     "mobx-react": "^4.2.2",
     "mysam": "git+https://github.com/mysamai/mysam.git",
-    "react": "^15.6.1",
+    "react": "^16.0.0",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {

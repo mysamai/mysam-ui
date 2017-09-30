@@ -8,7 +8,7 @@
 [![Dependency Status](https://img.shields.io/david/mysamai/mysam-ui.svg?style=flat-square)](https://david-dm.org/mysamai/mysam-ui)
 [![Download Status](https://img.shields.io/npm/dm/mysam-ui.svg?style=flat-square)](https://www.npmjs.com/package/mysam-ui)
 
-> A MySam web frontend for mysam-core built with React
+> A MySam web frontend for mysam built with React
 
 ## Installation
 

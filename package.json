@@ -1,7 +1,7 @@
 {
   "name": "mysam-ui",
   "description": "A MySam web frontend for mysam-core built with React",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/mysamai/mysam-ui",
   "main": "src/",
   "keywords": [

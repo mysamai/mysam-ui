@@ -16,6 +16,8 @@
 npm install mysam-ui --save
 ```
 
+Got to the [MySam repository](https://github.com/mysamai/mysam) to see installation instructions and how to use.
+
 ## License
 
 Copyright (c) 2017

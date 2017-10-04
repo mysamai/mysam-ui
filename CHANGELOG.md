@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.0.2](https://github.com/mysamai/mysam-ui/tree/v0.0.2) (2017-10-04)
+[Full Changelog](https://github.com/mysamai/mysam-ui/compare/v0.0.1...v0.0.2)
+
+**Merged pull requests:**
+
+- Update mocha to the latest version 🚀 [\#6](https://github.com/mysamai/mysam-ui/pull/6) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v0.0.1](https://github.com/mysamai/mysam-ui/tree/v0.0.1) (2017-09-30)
 **Closed issues:**
 

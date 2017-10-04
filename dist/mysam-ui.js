@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["mysam"] = factory();
+		exports["mysamUi"] = factory();
 	else
-		root["mysam"] = factory();
+		root["mysamUi"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

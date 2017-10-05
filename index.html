@@ -9,9 +9,13 @@
 </head>
 <body>
   <div id="content" class="full"></div>
+  <script src="//unpkg.com/mysam@0.2.0-pre.1/dist/mysam.js"></script>
   <script src="./dist/mysam-ui.js"></script>
   <script>
-    const sam = window.sam = mysam(document.getElementById('content'));
+    // Initialize API (in the browser)
+    const app = mysam();
+    // Load the UI
+    const sam = mysamUi(document.getElementById('content'), app);
 
     localStorage.debug = 'mysam*';
   </script>

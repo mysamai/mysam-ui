@@ -29297,7 +29297,7 @@ var DummyRecognition = function () {
 }();
 
 var debug = (0, _debug3.default)('mysam-frontend:recognizer');
-var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition || window.oSpeechRecognition;
+var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition || window.oSpeechRecognition || DummyRecognition;
 
 var Recognizer = function (_EventEmitter) {
   _inherits(Recognizer, _EventEmitter);

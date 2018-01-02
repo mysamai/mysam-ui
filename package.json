@@ -70,7 +70,7 @@
     "less": "^2.7.2",
     "mocha": "^4.0.0",
     "mysam": "^0.2.0-pre.1",
-    "semistandard": "^11.0.0",
+    "semistandard": "^12.0.0",
     "shx": "^0.2.2",
     "uglify-js": "^3.0.27",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.3",

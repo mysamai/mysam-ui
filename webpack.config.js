@@ -15,7 +15,7 @@ const commons = {
   module: {
     rules: [{
       test: /\.jsx?$/,
-      exclude: /node_modules\/(?!(feathers|mysam))/,
+      exclude: /node_modules\/(?!(@feathersjs|feathers|mysam))/,
       loader: 'babel-loader'
     }]
   },
@@ -40,11 +40,6 @@ const production = {
   },
   plugins: [
     new UglifyJSPlugin({
-      compress: {
-        warnings: false,
-        screw_ie8: true
-      },
-      comments: false,
       sourceMap: false
     }),
     new webpack.DefinePlugin({

@@ -40,7 +40,8 @@
     "clean": "shx rm -rf dist/ && shx mkdir -p dist",
     "styles": "lessc styles/styles.less > dist/styles.css",
     "add-dist": "npm run build && git add dist/ --force && git commit -am \"Updating dist\"",
-    "build": "npm run clean && npm run styles && npm run webpack",
+    "build": "npm run clean && npm run styles && npm run build:dev && npm run build:production",
+    "build:dev": "npm run webpack",
     "build:production": "NODE_ENV=production npm run webpack",
     "webpack": "webpack"
   },

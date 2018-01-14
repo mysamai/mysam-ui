@@ -84,9 +84,6 @@ export default class Recognizer extends EventEmitter {
 
       debug('Starting recognition');
 
-      this.listening = false;
-      this.recognition.start();
-
       this.once('transcript', transcript => {
         if (transcript.isFinal) {
           debug('Got final transcript', transcript);
@@ -97,6 +94,9 @@ export default class Recognizer extends EventEmitter {
       });
 
       this.once('error', onError);
+
+      this.listening = false;
+      this.recognition.start();
     });
   }
 

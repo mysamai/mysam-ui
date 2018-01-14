@@ -77,7 +77,7 @@ export default function (sam) {
 
     sam.recognizer.lang = classification.action.lang;
 
-    if(reply) {
+    if (reply) {
       return sam.render(<h1><Typer>{reply}</Typer></h1>, el);
     }
   });

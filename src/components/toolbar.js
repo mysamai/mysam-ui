@@ -7,13 +7,13 @@ export default observer(({ recognizer, sam }) => {
 
   return <header>
     <div className='padded'>
-      {sam.currentAction ?
-        <div className='pull-left'>
+      {sam.currentAction
+        ? <div className='pull-left'>
           <button className='round-button small' onClick={() => sam.runAction('learn')}>
             <i className='fa fa-undo' aria-hidden='true' />
           </button>
         </div>
-      : null}
+        : null}
       <div className='pull-right'>
         <small>{transcript.text}</small>
 

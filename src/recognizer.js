@@ -3,8 +3,8 @@ import { EventEmitter } from 'events';
 import { extendObservable } from 'mobx';
 
 class DummyRecognition {
-  start() {
-    if(typeof this.onerror === 'function') {
+  start () {
+    if (typeof this.onerror === 'function') {
       this.onerror(new Error('Speech recognition is not supported'));
     }
   }
@@ -66,7 +66,7 @@ export default class Recognizer extends EventEmitter {
     });
   }
 
-  set lang(language) {
+  set lang (language) {
     return (this.recognition.lang = language);
   }
 

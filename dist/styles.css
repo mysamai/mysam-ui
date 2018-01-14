@@ -3054,6 +3054,10 @@ input {
   width: 50%;
   background: transparent;
 }
+input::placeholder {
+  font-size: 75%;
+  color: #CCCCCC;
+}
 textarea {
   display: block;
   margin: 0 auto;

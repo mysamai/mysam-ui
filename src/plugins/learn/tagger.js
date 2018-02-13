@@ -3,7 +3,8 @@ import { observer } from 'mobx-react';
 
 class Tagger extends React.Component {
   setBound (index) {
-    const { selectedTag, action } = this.props;
+    const { action, learner } = this.props;
+    const selectedTag = learner.tags[0];
 
     if (!selectedTag) {
       return;
@@ -35,7 +36,8 @@ class Tagger extends React.Component {
   }
 
   render () {
-    const { tokens, action, selectedTag } = this.props;
+    const { tokens, action, learner } = this.props;
+    const selectedTag = learner.tags && learner.tags[0];
     const renderWord = (word, index) => {
       const bounds = (action.tags && action.tags[selectedTag]) || [];
       const className = bounds[0] <= index && bounds[1] >= index ? 'tagged' : '';

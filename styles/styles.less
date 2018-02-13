@@ -141,7 +141,6 @@ h1 {
 h2 {
   font-size: 2em;
   color: @brand-color-5;
-  font-style: italic;
 }
 
 select, textarea, input {
@@ -156,14 +155,15 @@ select {
   overflow: hidden;
   background: transparent;
   border: none;
-  border-bottom: 1px solid @brand-color-4;
-  -webkit-appearance: none;
+  border-radius: 0;
   font-size: 1em;
 
   &:focus {
     outline: none;
   }
 }
+
+// content: "\f078";
 
 textarea:focus, input:focus {
   outline: 0;
@@ -220,10 +220,6 @@ li {
   padding: 10px;
 }
 
-.tagged {
-  background-color: @brand-color-4;
-}
-
 #logo {
   width: 500px;
   max-width: 100%;
@@ -249,7 +245,14 @@ li {
 
 #learner {
   span {
-    margin: 0 5px;
+    margin: 0 2px;
+    padding: 5px;
+  }
+
+  .tagged {
+    background-color: @brand-color-2;
+    color: @lightGrey;
+    border-radius: 5px;
   }
 }
 

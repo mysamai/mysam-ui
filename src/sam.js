@@ -12,7 +12,7 @@ const defaultConfig = {
   }
 };
 
-module.exports = class MySamUi {
+export default class MySamUi {
   constructor (app, config = defaultConfig) {
     extendObservable(this, {
       recognizer: new Recognizer(),
@@ -122,4 +122,4 @@ module.exports = class MySamUi {
 
     this._teardownAction = fn.call(this, this.element, classification);
   }
-};
+}

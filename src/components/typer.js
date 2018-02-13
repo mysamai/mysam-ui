@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Typer extends React.Component {
+export default class Typer extends React.Component {
   constructor (props) {
     super(props);
     this.state = { text: '' };
@@ -55,5 +55,3 @@ class Typer extends React.Component {
     return <span>{this.state.text}</span>;
   }
 }
-
-export default Typer;

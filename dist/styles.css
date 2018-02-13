@@ -3016,7 +3016,6 @@ h1 {
 h2 {
   font-size: 2em;
   color: #818181;
-  font-style: italic;
 }
 select,
 textarea,
@@ -3025,14 +3024,12 @@ input {
 }
 select {
   border: 0;
-  border-radius: 0;
   width: 50%;
   margin-bottom: 20px;
   overflow: hidden;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #CCCCCC;
-  -webkit-appearance: none;
+  border-radius: 0;
   font-size: 1em;
 }
 select:focus {
@@ -3086,9 +3083,6 @@ li {
 .padded {
   padding: 10px;
 }
-.tagged {
-  background-color: #CCCCCC;
-}
 #logo {
   width: 500px;
   max-width: 100%;
@@ -3110,7 +3104,13 @@ li {
   transform: translateY(-50%);
 }
 #learner span {
-  margin: 0 5px;
+  margin: 0 2px;
+  padding: 5px;
+}
+#learner .tagged {
+  background-color: #35344a;
+  color: #EFEFEF;
+  border-radius: 5px;
 }
 header {
   width: 100%;

@@ -12,17 +12,16 @@ export class Store {
       action,
       classification,
       learners,
-      selectedTag: null
-    });
-  }
-
-  get learner () {
-    return Object.assign({
-      form () {},
-      onSubmit () {
-        return {};
+      selectedTag: null,
+      get learner () {
+        return Object.assign({
+          form () {},
+          onSubmit () {
+            return {};
+          }
+        }, this.learners[this.action.type]);
       }
-    }, this.learners[this.action.type]);
+    });
   }
 }
 

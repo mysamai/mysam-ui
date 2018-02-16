@@ -1,5 +1,18 @@
 # Change Log
 
+## [v0.1.0](https://github.com/mysamai/mysam-ui/tree/v0.1.0) (2018-02-16)
+[Full Changelog](https://github.com/mysamai/mysam-ui/compare/v0.0.3...v0.1.0)
+
+**Merged pull requests:**
+
+- Update less to the latest version 🚀 [\#13](https://github.com/mysamai/mysam-ui/pull/13) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update mocha to the latest version 🚀 [\#12](https://github.com/mysamai/mysam-ui/pull/12) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Fall back to keyboard input when speech recognition is not available [\#11](https://github.com/mysamai/mysam-ui/pull/11) ([daffl](https://github.com/daffl))
+- Update semistandard to the latest version 🚀 [\#10](https://github.com/mysamai/mysam-ui/pull/10) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update react-dom to the latest version 🚀 [\#9](https://github.com/mysamai/mysam-ui/pull/9) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update react to the latest version 🚀 [\#8](https://github.com/mysamai/mysam-ui/pull/8) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+- Update uglifyjs-webpack-plugin to the latest version 🚀 [\#7](https://github.com/mysamai/mysam-ui/pull/7) ([greenkeeper[bot]](https://github.com/apps/greenkeeper))
+
 ## [v0.0.3](https://github.com/mysamai/mysam-ui/tree/v0.0.3) (2017-10-05)
 [Full Changelog](https://github.com/mysamai/mysam-ui/compare/v0.0.2...v0.0.3)
 

@@ -9,9 +9,9 @@ export default function (sam) {
   });
 
   sam.learn('reply', {
-    description: 'Reply with',
+    description: 'Make a reply',
     form (classification = {}) {
-      const action = classification.action || {};
+      const { action = {} } = classification;
 
       return <input type='text' className='reply' defaultValue={action.reply} />;
     },

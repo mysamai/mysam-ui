@@ -4,20 +4,13 @@
   <title>MySam</title>
   <link href="//fonts.googleapis.com/css?family=Muli:400,400italic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./dist/styles.css">
+  <link rel="stylesheet" href="dist/styles.css">
   <script src="https://use.fontawesome.com/2a69994fc7.js"></script>
 </head>
 <body>
   <div id="content" class="full"></div>
-  <script src="//unpkg.com/mysam@0.2.0-pre.2/dist/mysam.js"></script>
-  <script src="./dist/mysam-ui.js"></script>
-  <script>
-    // Initialize API (in the browser)
-    const app = mysam();
-    // Load the UI
-    const sam = mysamUi(document.getElementById('content'), app);
-
-    localStorage.debug = 'mysam*';
-  </script>
+  <script src="//unpkg.com/mysam@0.2.0-pre.3/dist/mysam.js"></script>
+  <script src="dist/mysam-ui.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

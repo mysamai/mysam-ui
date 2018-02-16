@@ -8,7 +8,7 @@ const commons = {
   context: path.join(__dirname, 'src'),
   entry: './index.js',
   output: {
-    library: 'mysamUi',
+    library: [ 'mysam', 'ui' ],
     libraryTarget: 'umd',
     filename: path.join('dist', 'mysam-ui.js')
   },

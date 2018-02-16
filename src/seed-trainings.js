@@ -55,4 +55,22 @@ export default [{
     type: 'reply',
     reply: 'You\'re welcome'
   }
+}, {
+  text: 'how are you',
+  action: {
+    type: 'help',
+    reply: 'I am great! Here is what I can do:'
+  }
+}, {
+  text: 'how is it going',
+  action: {
+    type: 'help',
+    reply: 'I am great! Here is what I can do:'
+  }
+}, {
+  text: 'what is happening',
+  action: {
+    type: 'help',
+    reply: 'I am great! Here is what I can do:'
+  }
 }];

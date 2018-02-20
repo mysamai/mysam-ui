@@ -9,8 +9,16 @@
 </head>
 <body>
   <div id="content" class="full"></div>
-  <script src="//unpkg.com/mysam@^0.2.0/dist/mysam.js"></script>
+  <script src="//unpkg.com/mysam-core@^0.3.0/dist/mysam-core.js"></script>
   <script src="dist/mysam-ui.js"></script>
-  <script src="app.js"></script>
+  <script>
+    // Initialize API (in the browser)
+    const core = mysam.core();
+
+    // Load the UI
+    mysam.ui(document.getElementById('content'), core);
+
+    localStorage.debug = 'mysam*';
+  </script>
 </body>
 </html>

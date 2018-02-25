@@ -86,7 +86,8 @@ export default class MySamUi {
           previous.confidence < confidence.certain) {
         const training = {
           text: previous.text,
-          action: previous.action._id
+          action: previous.action._id,
+          type: 'reinforcement'
         };
         debug('Creating new training from previous classification', training);
         this.service('trainings').create(training);

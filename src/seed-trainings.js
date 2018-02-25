@@ -1,4 +1,14 @@
 export default [{
+  text: 'hi',
+  action: {
+    type: 'hi'
+  }
+}, {
+  text: 'hello',
+  action: {
+    type: 'hi'
+  }
+}, {
   text: 'hi my name is david',
   action: {
     type: 'hi',
@@ -62,6 +72,12 @@ export default [{
     reply: 'I am great! Here is what I can do:'
   }
 }, {
+  text: 'how\'re you',
+  action: {
+    type: 'help',
+    reply: 'I am great! Here is what I can do:'
+  }
+}, {
   text: 'how is it going',
   action: {
     type: 'help',
@@ -71,6 +87,12 @@ export default [{
   text: 'what is happening',
   action: {
     type: 'help',
-    reply: 'I am great! Here is what I can do:'
+    reply: 'Not too much. Here is what I can do:'
+  }
+}, {
+  text: 'what\'s up',
+  action: {
+    type: 'help',
+    reply: 'Not too much. Here is what I can do:'
   }
 }];

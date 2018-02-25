@@ -27,7 +27,9 @@ class Learner extends React.Component {
     const action = omit(merge({}, this.store.action, base), '_id');
 
     const data = toObject({
-      text: this.store.classification.text, action
+      text: this.store.classification.text,
+      type: 'custom',
+      action
     });
 
     this.store.sam.service('trainings').create(data).then(training => {

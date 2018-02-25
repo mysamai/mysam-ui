@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.1.1](https://github.com/mysamai/mysam-ui/tree/v0.1.1) (2018-02-25)
+[Full Changelog](https://github.com/mysamai/mysam-ui/compare/v0.1.0...v0.1.1)
+
+**Merged pull requests:**
+
+- Update seed trainings and add origin flag to training data [\#14](https://github.com/mysamai/mysam-ui/pull/14) ([daffl](https://github.com/daffl))
+
 ## [v0.1.0](https://github.com/mysamai/mysam-ui/tree/v0.1.0) (2018-02-16)
 [Full Changelog](https://github.com/mysamai/mysam-ui/compare/v0.0.3...v0.1.0)
 

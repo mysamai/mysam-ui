@@ -25965,7 +25965,8 @@ var MySamUi = function () {
         if (previous && previous.confidence > confidence.learn && previous.confidence < confidence.certain) {
           var training = {
             text: previous.text,
-            action: previous.action._id
+            action: previous.action._id,
+            type: 'reinforcement'
           };
           debug('Creating new training from previous classification', training);
           this.service('trainings').create(training);
@@ -26864,7 +26865,9 @@ var Learner = function (_React$Component) {
       var action = (0, _omit2.default)((0, _merge2.default)({}, _this.store.action, base), '_id');
 
       var data = toObject({
-        text: _this.store.classification.text, action: action
+        text: _this.store.classification.text,
+        type: 'custom',
+        action: action
       });
 
       _this.store.sam.service('trainings').create(data).then(function (training) {
@@ -30989,7 +30992,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (sam) {
   sam.action('home', function (el) {
     return sam.render(_react2.default.createElement('img', { style: { width: '50%' },
-      src: 'assets/svg/mysam-logo.svg',
+      src: '//unpkg.com/mysam-ui/assets/svg/mysam-logo.svg',
       className: 'logo', alt: 'MySam Logo' }), el);
   });
 
@@ -31257,6 +31260,16 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = [{
+  text: 'hi',
+  action: {
+    type: 'hi'
+  }
+}, {
+  text: 'hello',
+  action: {
+    type: 'hi'
+  }
+}, {
   text: 'hi my name is david',
   action: {
     type: 'hi',
@@ -31320,6 +31333,12 @@ exports.default = [{
     reply: 'I am great! Here is what I can do:'
   }
 }, {
+  text: 'how\'re you',
+  action: {
+    type: 'help',
+    reply: 'I am great! Here is what I can do:'
+  }
+}, {
   text: 'how is it going',
   action: {
     type: 'help',
@@ -31329,7 +31348,13 @@ exports.default = [{
   text: 'what is happening',
   action: {
     type: 'help',
-    reply: 'I am great! Here is what I can do:'
+    reply: 'Not too much. Here is what I can do:'
+  }
+}, {
+  text: 'what\'s up',
+  action: {
+    type: 'help',
+    reply: 'Not too much. Here is what I can do:'
   }
 }];
 

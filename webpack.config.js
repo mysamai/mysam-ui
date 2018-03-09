@@ -25,6 +25,7 @@ const commons = {
 };
 
 const dev = {
+  mode: 'development',
   devtool: 'source-map',
   devServer: {
     port: 3030,
@@ -34,7 +35,7 @@ const dev = {
 };
 
 const production = {
-  devtool: 'cheap-module-source-map',
+  mode: 'production',
   output: {
     filename: path.join('dist', 'mysam-ui.min.js')
   },

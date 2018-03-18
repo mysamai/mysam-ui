@@ -59,7 +59,7 @@
     "lib": "src"
   },
   "dependencies": {
-    "mobx": "^3.2.2",
+    "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
     "react-dom": "^16.1.0",
     "react": "^16.2.0"

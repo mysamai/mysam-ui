@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "mobx": "^5.8.0",
-    "mobx-react": "^5.4.3",
+    "mobx-react": "^6.0.2",
     "react-dom": "^16.7.0",
     "react": "^16.7.0"
   },

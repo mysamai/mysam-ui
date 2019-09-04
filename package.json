@@ -80,7 +80,7 @@
     "istanbul": "^1.1.0-alpha.1",
     "less": "^3.9.0",
     "mocha": "^6.0.0",
-    "semistandard": "^13.0.1",
+    "semistandard": "^14.1.0",
     "shx": "^0.3.2",
     "uglify-js": "^3.4.9",
     "uglifyjs-webpack-plugin": "^2.1.1",
